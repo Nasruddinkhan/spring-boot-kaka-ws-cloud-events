@@ -1,0 +1,36 @@
+---
+server:
+  port: 8084
+spring:
+  application.name: order-service
+  rabbitmq:
+    host: "127.0.0.1"
+    password: guest
+    port: 15672
+    username: guest
+  cloud:
+   stream:
+    default:
+      binder: kafka
+      contentType: application/json
+    bindings:
+      ordersConsumer-in-0:
+        destination: orders
+        group: ordersGroup
+    bindings.orderConsumer-in-0.consumer:
+      backOffInitialInterval: 500
+      backOffMaxInterval: 1000
+      backOffMultiplier: 2.0
+      maxAttempts: 3
+    rabbit.bindings.ordersConsumer-in-0.consumer:
+      autoBindDlq: true
+      republishToDlq: true
+    kafka.binder:
+      brokers: "127.0.0.1"
+      defaultBrokerPort: 9092
+    kafka.bindings.ordersConsumer-in-0.consumer:
+      enableDlq: true
+
+
+
+
