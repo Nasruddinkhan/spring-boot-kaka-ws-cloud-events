@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mypractice.rest.cloud.events</groupId>
-	<artifactId>spring-boot-kaka-ws-cloud-events</artifactId>
+	<artifactId>spring-boot-kaka-ws-cloud-stream</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-kaka-ws-cloud-events</name>
+	<name>spring-boot-kaka-ws-cloud-stream</name>
 	<description>Demo project for Spring Boot kakfa and event cloud</description>
 	<properties>
 		<java.version>1.8</java.version>

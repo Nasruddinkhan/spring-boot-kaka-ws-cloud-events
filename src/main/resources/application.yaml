@@ -1,6 +1,6 @@
----
+
 server:
-  port: 8084
+  port: 8014
 spring:
   application.name: order-service
   rabbitmq:
